@@ -1,0 +1,1259 @@
+Script started on Fri 07 Jun 2013 02:46:54 PM PDT
+vennewd@CF416-06:~/cs460s13/a7work$ chmod 705 -R a7d ..[Kblitz -g -wait -raw os
+Beginning execution...
+====================  KPL PROGRAM STARTING  ====================
+Initializing Thread Scheduler...
+Initializing Thread Manager...
+Initializing Frame Manager...
+AllocateRandomFrames called.  NUMBER_OF_PHYSICAL_PAGE_FRAMES = 512
+Initializing Disk Driver...
+Initializing File Manager...
+Initializing Serial Driver...
+
+==========  BasicSerialTest  ==========
+
+This test should be run in raw mode.
+
+Hit the "a" key.  Do not hit ENTER or RETURN...
+Returned value is correct.
+The buffer was updated correctly.
+
+Please type "abc".  Do not hit ENTER or RETURN...
+Returned value is correct.
+The buffer was updated correctly.
+
+Please type "hello".  Do not hit ENTER or RETURN...
+Returned value is correct.
+Returned value is correct.
+The buffer was updated correctly.
+
+Please type control-J.  Do not hit ENTER or RETURN...
+Returned value is correct.
+The buffer was updated correctly.
+
+Please type control-M.  Do not hit ENTER or RETURN...
+Returned value is correct.
+The buffer was updated correctly.
+
+Please type control-H.  Do not hit ENTER or RETURN...
+Returned value is correct.
+The buffer was updated correctly.
+
+Please type control-D.  Do not hit ENTER or RETURN...
+Returned value is correct.
+The buffer was not modified, as expected.
+
+==========  Test Complete  ==========
+
+
+FATAL ERROR in UserProgram: "Syscall 'Shutdown' was invoked by a user thread" -- TERMINATING!
+
+(To find out where execution was when the problem arose, type 'st' at the emulator prompt.)
+
+====================  KPL PROGRAM TERMINATION  ====================
+
+
+****  A 'debug' instruction was encountered  *****
+
+Done!  The next instruction to execute will be:
+001078: C0100000       sethi   0x0000,r1	! 0x00001088 = 4232 (noGoMessage)
+
+
+Entering machine-level debugger...
+
+======================================================
+=====                                            =====
+=====         The BLITZ Machine Emulator         =====
+=====                                            =====
+=====  Copyright 2001-2007, Harry H. Porter III  =====
+=====                                            =====
+======================================================
+
+Enter a command at the prompt.  Type 'quit' to exit or 'help' for
+info about commands.
+> q
+Number of Disk Reads    = 19
+Number of Disk Writes   = 0
+Instructions Executed   = 3543898
+Time Spent Sleeping     = 47416
+    Total Elapsed Time  = 3591314
+
+vennewd@CF416-06:~/cs460s13/a7work$ make cleanblitz -g -wait -raw os
+Beginning execution...
+====================  KPL PROGRAM STARTING  ====================
+Initializing Thread Scheduler...
+Initializing Thread Manager...
+Initializing Frame Manager...
+AllocateRandomFrames called.  NUMBER_OF_PHYSICAL_PAGE_FRAMES = 512
+Initializing Disk Driver...
+Initializing File Manager...
+Initializing Serial Driver...
+
+==========  KeyTest  ==========
+
+This test waits for a single character and then prints the value of that character.
+
+  1. Start by typing "abcABC123"
+  2. See what happens with characters like cntl-H (Backspace), cntl-J (NL) and cntl-M (CR).
+  3. See what happens when you hit keys labelled SPACE, ENTER/RETURN, TAB, DEL/BACKSPACE, ARROW KEYS and ESC.
+  4. See what happens when you hit cntl-D (EOF).
+  5. Try this test in cooked mode and in raw mode.
+
+This test will terminate when 'q' is typed.
+
+(To change to cooked mode, type control-C, "cooked", and "g" to resume execution.
+To change to raw mode, type control-C, ENTER, ENTER, "raw", and "g" to resume execution.)
+
+ch = 0x00000061 (decimal 97)
+ch = 0x00000062 (decimal 98)
+ch = 0x00000063 (decimal 99)
+ch = 0x00000041 (decimal 65)
+ch = 0x00000042 (decimal 66)
+ch = 0x00000043 (decimal 67)
+ch = 0x00000031 (decimal 49)
+ch = 0x00000032 (decimal 50)
+ch = 0x00000033 (decimal 51)
+ch = 0x00000008 (decimal 8)
+ch = 0x0000000A (decimal 10)
+ch = 0x0000000A (decimal 10)
+ch = 0x00000020 (decimal 32)
+ch = 0x0000000A (decimal 10)
+ch = 0x00000009 (decimal 9)
+ch = 0x0000007F (decimal 127)
+ch = 0x0000001B (decimal 27)
+ch = 0x0000005B (decimal 91)
+ch = 0x00000044 (decimal 68)
+ch = 0x0000001B (decimal 27)
+ch = 0x0000005B (decimal 91)
+ch = 0x00000041 (decimal 65)
+ch = 0x0000001B (decimal 27)
+ch = 0x0000005B (decimal 91)
+ch = 0x00000043 (decimal 67)
+ch = 0x0000001B (decimal 27)
+ch = 0x0000005B (decimal 91)
+ch = 0x00000042 (decimal 66)
+ch = 0x0000001B (decimal 27)
+
+*****  WARNING: Returned value from Read is zero; This should only occur when control-D is typed
+ch = 0x00000071 (decimal 113)
+
+==========  Test Complete  ==========
+
+
+FATAL ERROR in UserProgram: "Syscall 'Shutdown' was invoked by a user thread" -- TERMINATING!
+
+(To find out where execution was when the problem arose, type 'st' at the emulator prompt.)
+
+====================  KPL PROGRAM TERMINATION  ====================
+
+
+****  A 'debug' instruction was encountered  *****
+
+Done!  The next instruction to execute will be:
+001078: C0100000       sethi   0x0000,r1	! 0x00001088 = 4232 (noGoMessage)
+
+
+Entering machine-level debugger...
+
+======================================================
+=====                                            =====
+=====         The BLITZ Machine Emulator         =====
+=====                                            =====
+=====  Copyright 2001-2007, Harry H. Porter III  =====
+=====                                            =====
+======================================================
+
+Enter a command at the prompt.  Type 'quit' to exit or 'help' for
+info about commands.
+> q
+Number of Disk Reads    = 19
+Number of Disk Writes   = 0
+Instructions Executed   = 3718937
+Time Spent Sleeping     = 47416
+    Total Elapsed Time  = 3766353
+vennewd@CF416-06:~/cs460s13/a7work$ blitz -g -wait -raw os[1P os[1P os[1P os[1P os[1Pos[C[C[C
+Beginning execution...
+====================  KPL PROGRAM STARTING  ====================
+
+Initializing Thread Scheduler...
+
+Initializing Thread Manager...
+
+Initializing Frame Manager...
+
+AllocateRandomFrames called.  NUMBER_OF_PHYSICAL_PAGE_FRAMES = 512
+
+Initializing Disk Driver...
+
+Initializing File Manager...
+
+Initializing Serial Driver...
+
+
+
+==========  KeyTest  ==========
+
+
+
+This test waits for a single character and then prints the value of that character.
+
+
+
+  1. Start by typing "abcABC123"
+
+  2. See what happens with characters like cntl-H (Backspace), cntl-J (NL) and cntl-M (CR).
+
+  3. See what happens when you hit keys labelled SPACE, ENTER/RETURN, TAB, DEL/BACKSPACE, ARROW KEYS and ESC.
+
+  4. See what happens when you hit cntl-D (EOF).
+
+  5. Try this test in cooked mode and in raw mode.
+
+
+
+This test will terminate when 'q' is typed.
+
+
+
+(To change to cooked mode, type control-C, "cooked", and "g" to resume execution.
+
+To change to raw mode, type control-C, ENTER, ENTER, "raw", and "g" to resume execution.)
+
+
+
+
+
+*****  Execution suspended on 'wait' instruction; waiting for additional user input  *****
+
+abcABD123
+ch = 0x00000061 (decimal 97)
+
+ch = 0x00000062 (decimal 98)
+
+ch = 0x00000063 (decimal 99)
+
+ch = 0x00000041 (decimal 65)
+
+ch = 0x00000042 (decimal 66)
+
+ch = 0x00000044 (decimal 68)
+
+ch = 0x00000031 (decimal 49)
+
+ch = 0x00000032 (decimal 50)
+
+ch = 0x00000033 (decimal 51)
+
+ch = 0x0000000A (decimal 10)
+
+
+
+*****  Execution suspended on 'wait' instruction; waiting for additional user input  *****
+
+^H
+ch = 0x00000008 (decimal 8)
+
+ch = 0x0000000A (decimal 10)
+
+
+
+*****  Execution suspended on 'wait' instruction; waiting for additional user input  *****
+
+
+ch = 0x0000000A (decimal 10)
+
+
+
+*****  Execution suspended on 'wait' instruction; waiting for additional user input  *****
+
+ 
+ch = 0x00000020 (decimal 32)
+
+ch = 0x0000000A (decimal 10)
+
+
+
+*****  Execution suspended on 'wait' instruction; waiting for additional user input  *****
+
+	^[[D^[[A^[[C^[[B^[q
+ch = 0x0000001B (decimal 27)
+
+ch = 0x0000005B (decimal 91)
+
+ch = 0x00000044 (decimal 68)
+
+ch = 0x0000001B (decimal 27)
+
+ch = 0x0000005B (decimal 91)
+
+ch = 0x00000041 (decimal 65)
+
+ch = 0x0000001B (decimal 27)
+
+ch = 0x0000005B (decimal 91)
+
+ch = 0x00000043 (decimal 67)
+
+ch = 0x0000001B (decimal 27)
+
+ch = 0x0000005B (decimal 91)
+
+ch = 0x00000042 (decimal 66)
+
+ch = 0x0000001B (decimal 27)
+
+ch = 0x00000071 (decimal 113)
+
+
+
+==========  Test Complete  ==========
+
+
+
+
+
+FATAL ERROR in UserProgram: "Syscall 'Shutdown' was invoked by a user thread" -- TERMINATING!
+
+
+
+(To find out where execution was when the problem arose, type 'st' at the emulator prompt.)
+
+
+
+====================  KPL PROGRAM TERMINATION  ====================
+
+
+
+****  A 'debug' instruction was encountered  *****
+
+Done!  The next instruction to execute will be:
+001078: C0100000       sethi   0x0000,r1	! 0x00001088 = 4232 (noGoMessage)
+
+
+Entering machine-level debugger...
+
+======================================================
+=====                                            =====
+=====         The BLITZ Machine Emulator         =====
+=====                                            =====
+=====  Copyright 2001-2007, Harry H. Porter III  =====
+=====                                            =====
+======================================================
+
+Enter a command at the prompt.  Type 'quit' to exit or 'help' for
+info about commands.
+> q
+Number of Disk Reads    = 19
+Number of Disk Writes   = 0
+Instructions Executed   = 3702566
+Time Spent Sleeping     = 47416
+    Total Elapsed Time  = 3749982
+
+Beginning execution...
+====================  KPL PROGRAM STARTING  ====================
+Initializing Thread Scheduler...
+Initializing Thread Manager...
+Initializing Frame Manager...
+AllocateRandomFrames called.  NUMBER_OF_PHYSICAL_PAGE_FRAMES = 512
+Initializing Disk Driver...
+Initializing File Manager...
+Initializing Serial Driver...
+
+==========  EchoTest  ==========
+
+This test reads characters from the terminal.  It echoes each character, as it is received.
+
+  1. Start by typing "abc\n"
+  2. See what happens with characters like cntl-H (Backspace), cntl-J (NL) and cntl-M (CR).
+  3. See what happens when you hit keys labelled SPACE, ENTER/RETURN, TAB, DEL/BACKSPACE, and ESC.
+  4. See what happens when you hit cntl-D (EOF).
+  5. Try this test in cooked mode and in raw mode.
+  6. While in raw mode, see what happens with sequences from page 342 in the textbook.
+     For example, try typing these sequences:
+         ESC  [  7  m
+         ESC  [  5  A
+         control-g
+         up-arrow
+
+This test will terminate when 'q' is typed.
+
+(To change to cooked mode, type control-C, "cooked", and "g" to resume execution.
+To change to raw mode, type control-C, ENTER, ENTER, "raw", and "g" to resume execution.)
+
+abc
+
+
+ 
+	
+
+
+*****  Control-C  *****
+
+Done!  The next instruction to execute will be:
+001138: 09000000       ret     
+
+
+Entering machine-level debugger...
+
+======================================================
+=====                                            =====
+=====         The BLITZ Machine Emulator         =====
+=====                                            =====
+=====  Copyright 2001-2007, Harry H. Porter III  =====
+=====                                            =====
+======================================================
+
+Enter a command at the prompt.  Type 'quit' to exit or 'help' for
+info about commands.
+> cooked
+Future terminal input will be "cooked".
+> g
+Beginning execution...
+
+
+*****  Execution suspended on 'wait' instruction; waiting for additional user input  *****
+
+abc
+abc
+
+
+
+*****  Execution suspended on 'wait' instruction; waiting for additional user input  *****
+
+^H
+
+
+
+
+*****  Execution suspended on 'wait' instruction; waiting for additional user input  *****
+
+
+
+
+
+
+*****  Execution suspended on 'wait' instruction; waiting for additional user input  *****
+
+
+
+
+
+
+*****  Execution suspended on 'wait' instruction; waiting for additional user input  *****
+
+ 
+ 
+
+
+
+*****  Execution suspended on 'wait' instruction; waiting for additional user input  *****
+
+q
+q
+
+==========  Test Complete  ==========
+
+
+
+
+
+FATAL ERROR in UserProgram: "Syscall 'Shutdown' was invoked by a user thread" -- TERMINATING!
+
+
+
+(To find out where execution was when the problem arose, type 'st' at the emulator prompt.)
+
+
+
+====================  KPL PROGRAM TERMINATION  ====================
+
+
+
+****  A 'debug' instruction was encountered  *****
+
+Done!  The next instruction to execute will be:
+001078: C0100000       sethi   0x0000,r1	! 0x00001088 = 4232 (noGoMessage)
+> q
+Number of Disk Reads    = 19
+Number of Disk Writes   = 0
+Instructions Executed   = 3857173
+Time Spent Sleeping     = 49711
+    Total Elapsed Time  = 3906884
+vennewd@CF416-06:~/cs460s13/a7work$ blitz -g -wait -raw osmake[K clean
+rm -f Main.[os] Kernel.[os] BitMap.[os] List.[os] System.[os]
+rm -f Runtime.o Switch.o
+rm -f UserRuntime.o  UserSystem.[os]  UserLib.[os]
+rm -f *Program*.[os]
+rm -f cat.[os] hello.[os] sh.[os] wc.[os] echoargs.[os]
+rm -f *~
+vennewd@CF416-06:~/cs460s13/a7work$ make cleanblitz -g -wait -raw osmake[K
+asm Runtime.s
+asm Switch.s
+kpl System -unsafe
+asm System.s
+kpl List -unsafe
+asm List.s
+kpl BitMap -unsafe
+asm BitMap.s
+kpl Kernel -unsafe
+asm Kernel.s
+kpl Main -unsafe
+asm Main.s
+lddd Runtime.o Switch.o System.o List.o BitMap.o Kernel.o Main.o -o os
+asm UserRuntime.s
+kpl UserSystem -unsafe
+asm UserSystem.s
+kpl MyProgram -unsafe
+asm MyProgram.s
+lddd UserRuntime.o UserSystem.o MyProgram.o -o MyProgram
+kpl TestProgram1 -unsafe
+asm TestProgram1.s
+lddd UserRuntime.o UserSystem.o TestProgram1.o -o TestProgram1
+kpl TestProgram2 -unsafe
+asm TestProgram2.s
+lddd UserRuntime.o UserSystem.o TestProgram2.o -o TestProgram2
+kpl TestProgram3 -unsafe
+asm TestProgram3.s
+lddd UserRuntime.o UserSystem.o TestProgram3.o -o TestProgram3
+kpl TestProgram3a -unsafe
+asm TestProgram3a.s
+lddd UserRuntime.o UserSystem.o TestProgram3a.o -o TestProgram3a
+kpl TestProgram4 -unsafe
+asm TestProgram4.s
+lddd UserRuntime.o UserSystem.o TestProgram4.o -o TestProgram4
+kpl TestProgram5 -unsafe
+asm TestProgram5.s
+kpl UserLib -unsafe
+asm UserLib.s
+lddd UserRuntime.o UserSystem.o UserLib.o TestProgram5.o -o TestProgram5
+kpl Program1
+asm Program1.s
+lddd UserRuntime.o UserSystem.o Program1.o -o Program1
+kpl Program2 -unsafe
+asm Program2.s
+lddd UserRuntime.o UserSystem.o Program2.o -o Program2
+kpl sh -unsafe
+asm sh.s
+lddd UserRuntime.o UserSystem.o UserLib.o sh.o -o sh
+kpl cat -unsafe
+asm cat.s
+lddd UserRuntime.o UserSystem.o UserLib.o cat.o -o cat
+kpl hello -unsafe
+asm hello.s
+lddd UserRuntime.o UserSystem.o hello.o -o hello
+lddd -o grep grep.o UserRuntime.o UserSystem.o UserLib.o
+kpl -unsafe $(basename wc.k .k)
+asm wc.s
+lddd -o wc wc.o UserRuntime.o UserSystem.o UserLib.o
+kpl -unsafe $(basename echoargs.k .k)
+asm echoargs.s
+lddd -o echoargs echoargs.o UserRuntime.o UserSystem.o UserLib.o
+diskUtil -i
+diskUtil -a MyProgram MyProgram
+diskUtil -a TestProgram1 TestProgram1
+diskUtil -a TestProgram2 TestProgram2
+diskUtil -a TestProgram3 TestProgram3
+diskUtil -a TestProgram3a TestProgram3a
+diskUtil -a TestProgram4 TestProgram4
+diskUtil -a TestProgram5 TestProgram5
+diskUtil -a Program1 Program1
+diskUtil -a Program2 Program2
+diskUtil -a file1 file1
+diskUtil -a file2 file2
+diskUtil -a file3 file3
+diskUtil -a file1234abcd file1234abcd
+diskUtil -a fileA fileA
+diskUtil -a fileB fileB
+diskUtil -a fileC fileC
+diskUtil -a fileD fileD
+diskUtil -a sh sh
+diskUtil -a cat cat
+diskUtil -a hello hello
+diskUtil -a grep grep
+diskUtil -a wc wc
+diskUtil -a echoargs echoargs
+diskUtil -a script script
+diskUtil -a help help
+diskUtil -a FileWithVeryLongName012345678901234567890123456789 \
+		        FileWithVeryLongName012345678901234567890123456789
+diskUtil -a TestProgram5.k TestProgram5.k
+vennewd@CF416-06:~/cs460s13/a7work$ make cleanblitz -g -wait -raw os
+Beginning execution...
+====================  KPL PROGRAM STARTING  ====================
+Initializing Thread Scheduler...
+Initializing Thread Manager...
+Initializing Frame Manager...
+AllocateRandomFrames called.  NUMBER_OF_PHYSICAL_PAGE_FRAMES = 512
+Initializing Disk Driver...
+Initializing File Manager...
+Initializing Serial Driver...
+
+==========  LineEchoTest  ==========
+
+This program reads an entire line of input (up to 30 characters) into a buffer.
+After this program gets the entire line, it prints it.  Since this program
+does not echo characters as typed, you will not see the characters until after
+the entire line is completed by typing ENTER, when running the emulator in raw
+mode.  In cooked mode, the host (Unix) will echo characters and then, after the
+line is complete, this program will (re) print the line.
+
+  1. Start by typing "abc\n"
+  2. See what happens with characters like cntl-H (Backspace), cntl-J (NL) and cntl-M (CR).
+  3. See what happens when you hit keys labelled SPACE, ENTER/RETURN, TAB, DEL/BACKSPACE, and ESC.
+  4. See what happens when you hit cntl-D (EOF).
+  5. See what happens when the size of the buffer is exceeded.
+  6. In cooked mode, see how the host (Unix) processes editing keys, such as backspace.
+
+This test will terminate when the first character entered is 'q'.
+
+(To change to cooked mode, type control-C, "cooked", and "g" to resume execution.
+To change to raw mode, type control-C, ENTER, ENTER, "raw", and "g" to resume execution.)
+
+
+Number of characters entered = 4
+abc
+
+Number of characters entered = 2
+
+
+Number of characters entered = 1
+
+
+Number of characters entered = 2
+ 
+
+Number of characters entered = 3
+	
+Number of characters entered = 2
+q
+
+==========  Test Complete  ==========
+
+
+FATAL ERROR in UserProgram: "Syscall 'Shutdown' was invoked by a user thread" -- TERMINATING!
+
+(To find out where execution was when the problem arose, type 'st' at the emulator prompt.)
+
+====================  KPL PROGRAM TERMINATION  ====================
+
+
+****  A 'debug' instruction was encountered  *****
+
+Done!  The next instruction to execute will be:
+001078: C0100000       sethi   0x0000,r1	! 0x00001088 = 4232 (noGoMessage)
+
+
+Entering machine-level debugger...
+
+======================================================
+=====                                            =====
+=====         The BLITZ Machine Emulator         =====
+=====                                            =====
+=====  Copyright 2001-2007, Harry H. Porter III  =====
+=====                                            =====
+======================================================
+
+Enter a command at the prompt.  Type 'quit' to exit or 'help' for
+info about commands.
+> q
+Number of Disk Reads    = 19
+Number of Disk Writes   = 0
+Instructions Executed   = 3618589
+Time Spent Sleeping     = 47416
+    Total Elapsed Time  = 3666005
+vennewd@CF416-06:~/cs460s13/a7work$ blitz -g -wait -raw osmake[K clean
+rm -f Main.[os] Kernel.[os] BitMap.[os] List.[os] System.[os]
+rm -f Runtime.o Switch.o
+rm -f UserRuntime.o  UserSystem.[os]  UserLib.[os]
+rm -f *Program*.[os]
+rm -f cat.[os] hello.[os] sh.[os] wc.[os] echoargs.[os]
+rm -f *~
+vennewd@CF416-06:~/cs460s13/a7work$ make cleanblitz -g -wait -raw osmake[K
+asm Runtime.s
+asm Switch.s
+kpl System -unsafe
+asm System.s
+kpl List -unsafe
+asm List.s
+kpl BitMap -unsafe
+asm BitMap.s
+kpl Kernel -unsafe
+asm Kernel.s
+kpl Main -unsafe
+asm Main.s
+lddd Runtime.o Switch.o System.o List.o BitMap.o Kernel.o Main.o -o os
+asm UserRuntime.s
+kpl UserSystem -unsafe
+asm UserSystem.s
+kpl MyProgram -unsafe
+asm MyProgram.s
+lddd UserRuntime.o UserSystem.o MyProgram.o -o MyProgram
+kpl TestProgram1 -unsafe
+asm TestProgram1.s
+lddd UserRuntime.o UserSystem.o TestProgram1.o -o TestProgram1
+kpl TestProgram2 -unsafe
+asm TestProgram2.s
+lddd UserRuntime.o UserSystem.o TestProgram2.o -o TestProgram2
+kpl TestProgram3 -unsafe
+asm TestProgram3.s
+lddd UserRuntime.o UserSystem.o TestProgram3.o -o TestProgram3
+kpl TestProgram3a -unsafe
+asm TestProgram3a.s
+lddd UserRuntime.o UserSystem.o TestProgram3a.o -o TestProgram3a
+kpl TestProgram4 -unsafe
+asm TestProgram4.s
+lddd UserRuntime.o UserSystem.o TestProgram4.o -o TestProgram4
+kpl TestProgram5 -unsafe
+asm TestProgram5.s
+kpl UserLib -unsafe
+asm UserLib.s
+lddd UserRuntime.o UserSystem.o UserLib.o TestProgram5.o -o TestProgram5
+kpl Program1
+asm Program1.s
+lddd UserRuntime.o UserSystem.o Program1.o -o Program1
+kpl Program2 -unsafe
+asm Program2.s
+lddd UserRuntime.o UserSystem.o Program2.o -o Program2
+kpl sh -unsafe
+asm sh.s
+lddd UserRuntime.o UserSystem.o UserLib.o sh.o -o sh
+kpl cat -unsafe
+asm cat.s
+lddd UserRuntime.o UserSystem.o UserLib.o cat.o -o cat
+kpl hello -unsafe
+asm hello.s
+lddd UserRuntime.o UserSystem.o hello.o -o hello
+lddd -o grep grep.o UserRuntime.o UserSystem.o UserLib.o
+kpl -unsafe $(basename wc.k .k)
+asm wc.s
+lddd -o wc wc.o UserRuntime.o UserSystem.o UserLib.o
+kpl -unsafe $(basename echoargs.k .k)
+asm echoargs.s
+lddd -o echoargs echoargs.o UserRuntime.o UserSystem.o UserLib.o
+diskUtil -i
+diskUtil -a MyProgram MyProgram
+diskUtil -a TestProgram1 TestProgram1
+diskUtil -a TestProgram2 TestProgram2
+diskUtil -a TestProgram3 TestProgram3
+diskUtil -a TestProgram3a TestProgram3a
+diskUtil -a TestProgram4 TestProgram4
+diskUtil -a TestProgram5 TestProgram5
+diskUtil -a Program1 Program1
+diskUtil -a Program2 Program2
+diskUtil -a file1 file1
+diskUtil -a file2 file2
+diskUtil -a file3 file3
+diskUtil -a file1234abcd file1234abcd
+diskUtil -a fileA fileA
+diskUtil -a fileB fileB
+diskUtil -a fileC fileC
+diskUtil -a fileD fileD
+diskUtil -a sh sh
+diskUtil -a cat cat
+diskUtil -a hello hello
+diskUtil -a grep grep
+diskUtil -a wc wc
+diskUtil -a echoargs echoargs
+diskUtil -a script script
+diskUtil -a help help
+diskUtil -a FileWithVeryLongName012345678901234567890123456789 \
+		        FileWithVeryLongName012345678901234567890123456789
+diskUtil -a TestProgram5.k TestProgram5.k
+vennewd@CF416-06:~/cs460s13/a7work$ make cleanblitz -g -wait -raw os
+Beginning execution...
+====================  KPL PROGRAM STARTING  ====================
+Initializing Thread Scheduler...
+Initializing Thread Manager...
+Initializing Frame Manager...
+AllocateRandomFrames called.  NUMBER_OF_PHYSICAL_PAGE_FRAMES = 512
+Initializing Disk Driver...
+Initializing File Manager...
+Initializing Serial Driver...
+
+==========  EOFTest  ==========
+
+This test should be run in 'raw' mode.
+
+This function tests the handling of control-D.  Control-D is the
+enf-of-file character.  When typed, it should cause an immediate
+return from the Read syscall.  If no other characters have been
+typed first, then the count returned from Read will be zero, which
+many programs will interpret as 'end-of-file'.
+
+Please hit control-D next.  The ENTER key should not be necessary...
+Okay.
+Please type "abc" followed by control-D.  The ENTER key should not be necessary...
+Okay.
+
+==========  Test Complete  ==========
+
+
+FATAL ERROR in UserProgram: "Syscall 'Shutdown' was invoked by a user thread" -- TERMINATING!
+
+(To find out where execution was when the problem arose, type 'st' at the emulator prompt.)
+
+====================  KPL PROGRAM TERMINATION  ====================
+
+
+****  A 'debug' instruction was encountered  *****
+
+Done!  The next instruction to execute will be:
+001078: C0100000       sethi   0x0000,r1	! 0x00001088 = 4232 (noGoMessage)
+
+
+Entering machine-level debugger...
+
+======================================================
+=====                                            =====
+=====         The BLITZ Machine Emulator         =====
+=====                                            =====
+=====  Copyright 2001-2007, Harry H. Porter III  =====
+=====                                            =====
+======================================================
+
+Enter a command at the prompt.  Type 'quit' to exit or 'help' for
+info about commands.
+> q
+Number of Disk Reads    = 19
+Number of Disk Writes   = 0
+Instructions Executed   = 3432748
+Time Spent Sleeping     = 47416
+    Total Elapsed Time  = 3480164
+vennewd@CF416-06:~/cs460s13/a7work$ blitz -g -wait -raw osmake[K clean
+rm -f Main.[os] Kernel.[os] BitMap.[os] List.[os] System.[os]
+rm -f Runtime.o Switch.o
+rm -f UserRuntime.o  UserSystem.[os]  UserLib.[os]
+rm -f *Program*.[os]
+rm -f cat.[os] hello.[os] sh.[os] wc.[os] echoargs.[os]
+rm -f *~
+vennewd@CF416-06:~/cs460s13/a7work$ make cleanblitz -g -wait -raw osmake[K
+asm Runtime.s
+asm Switch.s
+kpl System -unsafe
+asm System.s
+kpl List -unsafe
+asm List.s
+kpl BitMap -unsafe
+asm BitMap.s
+kpl Kernel -unsafe
+asm Kernel.s
+kpl Main -unsafe
+asm Main.s
+lddd Runtime.o Switch.o System.o List.o BitMap.o Kernel.o Main.o -o os
+asm UserRuntime.s
+kpl UserSystem -unsafe
+asm UserSystem.s
+kpl MyProgram -unsafe
+asm MyProgram.s
+lddd UserRuntime.o UserSystem.o MyProgram.o -o MyProgram
+kpl TestProgram1 -unsafe
+asm TestProgram1.s
+lddd UserRuntime.o UserSystem.o TestProgram1.o -o TestProgram1
+kpl TestProgram2 -unsafe
+asm TestProgram2.s
+lddd UserRuntime.o UserSystem.o TestProgram2.o -o TestProgram2
+kpl TestProgram3 -unsafe
+asm TestProgram3.s
+lddd UserRuntime.o UserSystem.o TestProgram3.o -o TestProgram3
+kpl TestProgram3a -unsafe
+asm TestProgram3a.s
+lddd UserRuntime.o UserSystem.o TestProgram3a.o -o TestProgram3a
+kpl TestProgram4 -unsafe
+asm TestProgram4.s
+lddd UserRuntime.o UserSystem.o TestProgram4.o -o TestProgram4
+kpl TestProgram5 -unsafe
+asm TestProgram5.s
+kpl UserLib -unsafe
+asm UserLib.s
+lddd UserRuntime.o UserSystem.o UserLib.o TestProgram5.o -o TestProgram5
+kpl Program1
+asm Program1.s
+lddd UserRuntime.o UserSystem.o Program1.o -o Program1
+kpl Program2 -unsafe
+asm Program2.s
+lddd UserRuntime.o UserSystem.o Program2.o -o Program2
+kpl sh -unsafe
+asm sh.s
+lddd UserRuntime.o UserSystem.o UserLib.o sh.o -o sh
+kpl cat -unsafe
+asm cat.s
+lddd UserRuntime.o UserSystem.o UserLib.o cat.o -o cat
+kpl hello -unsafe
+asm hello.s
+lddd UserRuntime.o UserSystem.o hello.o -o hello
+lddd -o grep grep.o UserRuntime.o UserSystem.o UserLib.o
+kpl -unsafe $(basename wc.k .k)
+asm wc.s
+lddd -o wc wc.o UserRuntime.o UserSystem.o UserLib.o
+kpl -unsafe $(basename echoargs.k .k)
+asm echoargs.s
+lddd -o echoargs echoargs.o UserRuntime.o UserSystem.o UserLib.o
+diskUtil -i
+diskUtil -a MyProgram MyProgram
+diskUtil -a TestProgram1 TestProgram1
+diskUtil -a TestProgram2 TestProgram2
+diskUtil -a TestProgram3 TestProgram3
+diskUtil -a TestProgram3a TestProgram3a
+diskUtil -a TestProgram4 TestProgram4
+diskUtil -a TestProgram5 TestProgram5
+diskUtil -a Program1 Program1
+diskUtil -a Program2 Program2
+diskUtil -a file1 file1
+diskUtil -a file2 file2
+diskUtil -a file3 file3
+diskUtil -a file1234abcd file1234abcd
+diskUtil -a fileA fileA
+diskUtil -a fileB fileB
+diskUtil -a fileC fileC
+diskUtil -a fileD fileD
+diskUtil -a sh sh
+diskUtil -a cat cat
+diskUtil -a hello hello
+diskUtil -a grep grep
+diskUtil -a wc wc
+diskUtil -a echoargs echoargs
+diskUtil -a script script
+diskUtil -a help help
+diskUtil -a FileWithVeryLongName012345678901234567890123456789 \
+		        FileWithVeryLongName012345678901234567890123456789
+diskUtil -a TestProgram5.k TestProgram5.k
+vennewd@CF416-06:~/cs460s13/a7work$ make cleanblitz -g -wait -raw os
+Beginning execution...
+====================  KPL PROGRAM STARTING  ====================
+Initializing Thread Scheduler...
+Initializing Thread Manager...
+Initializing Frame Manager...
+AllocateRandomFrames called.  NUMBER_OF_PHYSICAL_PAGE_FRAMES = 512
+Initializing Disk Driver...
+Initializing File Manager...
+Initializing Serial Driver...
+
+==========  OpenCloseTerminalTest  ==========
+
+Opening '/dev/serial0' 10 times...
+Closing all 10 fileDescriptors...
+Opening '/dev/serial0' 10 times...
+Closing all 10 fileDescriptors...
+Opening '/dev/serial0' 10 times...
+Closing all 10 fileDescriptors...
+Opening '/dev/serial0' 10 times...
+Closing all 10 fileDescriptors...
+Opening '/dev/serial0' 10 times...
+Closing all 10 fileDescriptors...
+Opening '/dev/serial0' 10 times...
+Closing all 10 fileDescriptors...
+Opening '/dev/serial0' 10 times...
+Closing all 10 fileDescriptors...
+Opening '/dev/serial0' 10 times...
+Closing all 10 fileDescriptors...
+Opening '/dev/serial0' 10 times...
+Closing all 10 fileDescriptors...
+Opening '/dev/serial0' 10 times...
+Closing all 10 fileDescriptors...
+Opening '/dev/serial0' 10 times...
+Attempting to open '/dev/serial0' one more time, which should fail.
+The syscall correctly returns -1.
+Closing all 10 fileDescriptors...
+
+==========  Test Complete  ==========
+
+
+FATAL ERROR in UserProgram: "Syscall 'Shutdown' was invoked by a user thread" -- TERMINATING!
+
+(To find out where execution was when the problem arose, type 'st' at the emulator prompt.)
+
+====================  KPL PROGRAM TERMINATION  ====================
+
+
+****  A 'debug' instruction was encountered  *****
+
+Done!  The next instruction to execute will be:
+001078: C0100000       sethi   0x0000,r1	! 0x00001088 = 4232 (noGoMessage)
+
+
+Entering machine-level debugger...
+
+======================================================
+=====                                            =====
+=====         The BLITZ Machine Emulator         =====
+=====                                            =====
+=====  Copyright 2001-2007, Harry H. Porter III  =====
+=====                                            =====
+======================================================
+
+Enter a command at the prompt.  Type 'quit' to exit or 'help' for
+info about commands.
+> ^[[A    q
+Number of Disk Reads    = 19
+Number of Disk Writes   = 0
+Instructions Executed   = 4024211
+Time Spent Sleeping     = 47416
+    Total Elapsed Time  = 4071627
+vennewd@CF416-06:~/cs460s13/a7work$ blitz -g -wait -raw os[1Pos[1Pos[1Pos[1Pos[1Pos[C[C
+Beginning execution...
+====================  KPL PROGRAM STARTING  ====================
+
+Initializing Thread Scheduler...
+
+Initializing Thread Manager...
+
+Initializing Frame Manager...
+
+AllocateRandomFrames called.  NUMBER_OF_PHYSICAL_PAGE_FRAMES = 512
+
+Initializing Disk Driver...
+
+Initializing File Manager...
+
+Initializing Serial Driver...
+
+
+
+==========  OpenCloseTerminalTest  ==========
+
+
+
+Opening '/dev/serial0' 10 times...
+
+Closing all 10 fileDescriptors...
+
+Opening '/dev/serial0' 10 times...
+
+Closing all 10 fileDescriptors...
+
+Opening '/dev/serial0' 10 times...
+
+Closing all 10 fileDescriptors...
+
+Opening '/dev/serial0' 10 times...
+
+Closing all 10 fileDescriptors...
+
+Opening '/dev/serial0' 10 times...
+
+Closing all 10 fileDescriptors...
+
+Opening '/dev/serial0' 10 times...
+
+Closing all 10 fileDescriptors...
+
+Opening '/dev/serial0' 10 times...
+
+Closing all 10 fileDescriptors...
+
+Opening '/dev/serial0' 10 times...
+
+Closing all 10 fileDescriptors...
+
+Opening '/dev/serial0' 10 times...
+
+Closing all 10 fileDescriptors...
+
+Opening '/dev/serial0' 10 times...
+
+Closing all 10 fileDescriptors...
+
+Opening '/dev/serial0' 10 times...
+
+Attempting to open '/dev/serial0' one more time, which should fail.
+
+The syscall correctly returns -1.
+
+Closing all 10 fileDescriptors...
+
+
+
+==========  Test Complete  ==========
+
+
+
+
+
+FATAL ERROR in UserProgram: "Syscall 'Shutdown' was invoked by a user thread" -- TERMINATING!
+
+
+
+(To find out where execution was when the problem arose, type 'st' at the emulator prompt.)
+
+
+
+====================  KPL PROGRAM TERMINATION  ====================
+
+
+
+****  A 'debug' instruction was encountered  *****
+
+Done!  The next instruction to execute will be:
+001078: C0100000       sethi   0x0000,r1	! 0x00001088 = 4232 (noGoMessage)
+
+
+Entering machine-level debugger...
+
+======================================================
+=====                                            =====
+=====         The BLITZ Machine Emulator         =====
+=====                                            =====
+=====  Copyright 2001-2007, Harry H. Porter III  =====
+=====                                            =====
+======================================================
+
+Enter a command at the prompt.  Type 'quit' to exit or 'help' for
+info about commands.
+> q
+Number of Disk Reads    = 19
+Number of Disk Writes   = 0
+Instructions Executed   = 4024211
+Time Spent Sleeping     = 47416
+    Total Elapsed Time  = 4071627
+vennewd@CF416-06:~/cs460s13/a7work$ blitz -g -wait os-raw osmake[K clean
+rm -f Main.[os] Kernel.[os] BitMap.[os] List.[os] System.[os]
+rm -f Runtime.o Switch.o
+rm -f UserRuntime.o  UserSystem.[os]  UserLib.[os]
+rm -f *Program*.[os]
+rm -f cat.[os] hello.[os] sh.[os] wc.[os] echoargs.[os]
+rm -f *~
+vennewd@CF416-06:~/cs460s13/a7work$ make cleanblitz -g -wait os-raw osmake[K
+asm Runtime.s
+asm Switch.s
+kpl System -unsafe
+asm System.s
+kpl List -unsafe
+asm List.s
+kpl BitMap -unsafe
+asm BitMap.s
+kpl Kernel -unsafe
+asm Kernel.s
+kpl Main -unsafe
+asm Main.s
+lddd Runtime.o Switch.o System.o List.o BitMap.o Kernel.o Main.o -o os
+asm UserRuntime.s
+kpl UserSystem -unsafe
+asm UserSystem.s
+kpl MyProgram -unsafe
+asm MyProgram.s
+lddd UserRuntime.o UserSystem.o MyProgram.o -o MyProgram
+kpl TestProgram1 -unsafe
+asm TestProgram1.s
+lddd UserRuntime.o UserSystem.o TestProgram1.o -o TestProgram1
+kpl TestProgram2 -unsafe
+asm TestProgram2.s
+lddd UserRuntime.o UserSystem.o TestProgram2.o -o TestProgram2
+kpl TestProgram3 -unsafe
+asm TestProgram3.s
+lddd UserRuntime.o UserSystem.o TestProgram3.o -o TestProgram3
+kpl TestProgram3a -unsafe
+asm TestProgram3a.s
+lddd UserRuntime.o UserSystem.o TestProgram3a.o -o TestProgram3a
+kpl TestProgram4 -unsafe
+asm TestProgram4.s
+lddd UserRuntime.o UserSystem.o TestProgram4.o -o TestProgram4
+kpl TestProgram5 -unsafe
+asm TestProgram5.s
+kpl UserLib -unsafe
+asm UserLib.s
+lddd UserRuntime.o UserSystem.o UserLib.o TestProgram5.o -o TestProgram5
+kpl Program1
+asm Program1.s
+lddd UserRuntime.o UserSystem.o Program1.o -o Program1
+kpl Program2 -unsafe
+asm Program2.s
+lddd UserRuntime.o UserSystem.o Program2.o -o Program2
+kpl sh -unsafe
+asm sh.s
+lddd UserRuntime.o UserSystem.o UserLib.o sh.o -o sh
+kpl cat -unsafe
+asm cat.s
+lddd UserRuntime.o UserSystem.o UserLib.o cat.o -o cat
+kpl hello -unsafe
+asm hello.s
+lddd UserRuntime.o UserSystem.o hello.o -o hello
+lddd -o grep grep.o UserRuntime.o UserSystem.o UserLib.o
+kpl -unsafe $(basename wc.k .k)
+asm wc.s
+lddd -o wc wc.o UserRuntime.o UserSystem.o UserLib.o
+kpl -unsafe $(basename echoargs.k .k)
+asm echoargs.s
+lddd -o echoargs echoargs.o UserRuntime.o UserSystem.o UserLib.o
+diskUtil -i
+diskUtil -a MyProgram MyProgram
+diskUtil -a TestProgram1 TestProgram1
+diskUtil -a TestProgram2 TestProgram2
+diskUtil -a TestProgram3 TestProgram3
+diskUtil -a TestProgram3a TestProgram3a
+diskUtil -a TestProgram4 TestProgram4
+diskUtil -a TestProgram5 TestProgram5
+diskUtil -a Program1 Program1
+diskUtil -a Program2 Program2
+diskUtil -a file1 file1
+diskUtil -a file2 file2
+diskUtil -a file3 file3
+diskUtil -a file1234abcd file1234abcd
+diskUtil -a fileA fileA
+diskUtil -a fileB fileB
+diskUtil -a fileC fileC
+diskUtil -a fileD fileD
+diskUtil -a sh sh
+diskUtil -a cat cat
+diskUtil -a hello hello
+diskUtil -a grep grep
+diskUtil -a wc wc
+diskUtil -a echoargs echoargs
+diskUtil -a script script
+diskUtil -a help help
+diskUtil -a FileWithVeryLongName012345678901234567890123456789 \
+		        FileWithVeryLongName012345678901234567890123456789
+diskUtil -a TestProgram5.k TestProgram5.k
+vennewd@CF416-06:~/cs460s13/a7work$ make cleanblitz -g -wait os-raw os
+Beginning execution...
+====================  KPL PROGRAM STARTING  ====================
+Initializing Thread Scheduler...
+Initializing Thread Manager...
+Initializing Frame Manager...
+AllocateRandomFrames called.  NUMBER_OF_PHYSICAL_PAGE_FRAMES = 512
+Initializing Disk Driver...
+Initializing File Manager...
+Initializing Serial Driver...
+
+==========  TerminalErrorTest  ==========
+
+(This test should be run in cooked mode.)
+Opening '/dev/serial0' file...
+Reading with negative sizeInBytes...
+Okay.
+Reading with negative sizeInBytes...
+Okay.
+Reading with a pointer to a page which is read-only, which should be an error...
+Please type "abc\n" next.
+**************************  ERROR: The next input character is expected to be 'a' but was 'b' instead  **************************
+Reading with a pointer which isn't in our address space, which should be an error...
+Please type "xyz\n" next.
+**************************  ERROR: The next input character is expected to be 'x' but was 'y' instead  **************************
+
+
+*****  Control-C  *****
+
+Done!  The next instruction to execute will be:
+001138: 09000000       ret     
+
+
+Entering machine-level debugger...
+
+======================================================
+=====                                            =====
+=====         The BLITZ Machine Emulator         =====
+=====                                            =====
+=====  Copyright 2001-2007, Harry H. Porter III  =====
+=====                                            =====
+======================================================
+
+Enter a command at the prompt.  Type 'quit' to exit or 'help' for
+info about commands.
+> q
+Number of Disk Reads    = 19
+Number of Disk Writes   = 0
+Instructions Executed   = 3464011
+Time Spent Sleeping     = 51662
+    Total Elapsed Time  = 3515673
+vennewd@CF416-06:~/cs460s13/a7work$ exit
+
+Script done on Fri 07 Jun 2013 02:57:13 PM PDT
